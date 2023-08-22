@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Blog</title>
+		<link
+			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+			rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="../css/blog.css" />
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav>
+			<div class="nav-left">
+				<ul>
+					<li>
+						<a href="../index.html">
+							<img src="../image/Logo.png" alt="logo" />
+						</a>
+					</li>
+					<li class="item-collapse">
+						<a href="../index.html">Home</a>
+					</li>
+					<li class="item-collapse">
+						<a href="../html/blog.html" class="active">My Project</a>
+					</li>
+					<li class="item-collapse">
+						<a href="../html/testimonial.html">Testimonial</a>
+					</li>
+				</ul>
+			</div>
+			<div class="nav-right item-collapse">
+				<a href="../html/contact.html">Contact Me</a>
+			</div>
+
+			<div class="nav-right" id="barsmenu">
+				<button
+					style="background-color: transparent; border: none; cursor: pointer"
+					onclick="openHamburger();">
+					<i class="fa-2x fa-solid fa-bars" style="color: white"></i>
+				</button>
+			</div>
+		</nav>
+
+		<div class="hamburger-nav-container" id="hamburger-nav-container">
+			<a href="../index.html">Home</a>
+			<a href="blog.html" class="hamburger-active">Blog</a>
+			<a href="testimonial.html">Testimonial</a>
+			<div class="contact-hum">
+				<a href="contact.html">Contact Me</a>
+			</div>
+		</div>
+
+		<!-- Form blog -->
+		<div class="blog">
+			<div class="blog-form">
+				<div class="form-container">
+					<form id="form">
+						<h1>ADD MY PROJECT</h1>
+						<div class="input-title">
+							<label for="input-blog-title">Project Name</label>
+							<input type="text" id="input-blog-title" />
+						</div>
+						<div class="blog-date">
+							<div class="start-date">
+								<label for="input-blog-startDate">Start Date</label>
+								<input type="date" id="input-blog-startDate" />
+							</div>
+							<div class="end-date">
+								<label for="input-blog-endDate">End Date</label>
+								<input type="date" id="input-blog-endDate" />
+							</div>
+						</div>
+						<div>
+							<label for="input-blog-content">Description</label>
+							<textarea id="input-blog-content"></textarea>
+						</div>
+						<div>
+							<label>Technologies</label>
+							<div class="tech">
+								<div class="tech-left">
+									<div class="chk-left">
+										<input
+											type="checkbox"
+											class="multi-input"
+											id="input-chk-node" />
+										<label>Node Js</label>
+									</div>
+									<div class="chk-right">
+										<input
+											type="checkbox"
+											class="multi-input"
+											id="input-chk-next" />
+										<label>Next Js</label>
+									</div>
+								</div>
+								<div class="tech-right">
+									<div class="chk-left">
+										<input
+											type="checkbox"
+											class="multi-input"
+											id="input-chk-react" />
+										<label>React Js</label>
+									</div>
+									<div class="chk-right">
+										<input
+											type="checkbox"
+											class="multi-input"
+											id="input-chk-ts" />
+										<label>TypeScript</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<label>Upload Image</label>
+							<div class="input-blog-image-group">
+								<label for="input-blog-image">
+									<div>
+										<p>choose</p>
+									</div>
+									<i class="fa-solid fa-paperclip"></i>
+								</label>
+								<input type="file" id="input-blog-image" hidden />
+							</div>
+						</div>
+						<div class="button-group">
+							<button type="submit" onclick="addBlog(event)">submit</button>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<!-- Blog Contect -->
+			<div class="blog-content">
+				<h1>MY PROJECT</h1>
+				<div id="contents" class="card">
+					<div class="container-card">
+						<div class="card-content">
+							<img src="../image/project.jpeg" alt="gambar" />
+							<a href="blog-detail.html" target="_blank">
+								<h1>Dumbways Mobile App - 2021</h1>
+							</a>
+							<p>durasi : 3 bulan</p>
+							<div id="container-desc">
+								App that used for dumbways student, it was deployed and can
+								downloaded on playstore. Happy download
+							</div>
+							<div>
+								<i class="fa-brands fa-node"></i>
+								<i class="fa-brands fa-square-js"></i>
+								<i class="fa-brands fa-react"></i>
+								<i class="fa-brands fa-node-js"></i>
+							</div>
+							<div class="ctn-btn">
+								<div class="btn-left">
+									<button>edit</button>
+								</div>
+								<div class="btn-right">
+									<button>delete</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="container-card">
+						<div class="card-content">
+							<img src="../image/project.jpeg" alt="gambar" />
+							<a href="blog-detail.html" target="_blank">
+								<h1>Dumbways Mobile App - 2021</h1>
+							</a>
+							<p>durasi : 3 bulan</p>
+							<div id="container-desc">
+								App that used for dumbways student, it was deployed and can
+								downloaded on playstore. Happy download
+							</div>
+							<div>
+								<i class="fa-brands fa-node"></i>
+								<i class="fa-brands fa-square-js"></i>
+								<i class="fa-brands fa-react"></i>
+								<i class="fa-brands fa-node-js"></i>
+							</div>
+							<div class="ctn-btn">
+								<div class="btn-left">
+									<button>edit</button>
+								</div>
+								<div class="btn-right">
+									<button>delete</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="container-card">
+						<div class="card-content">
+							<img src="../image/project.jpeg" alt="gambar" />
+							<a href="blog-detail.html" target="_blank">
+								<h1>Dumbways Mobile App - 2021</h1>
+							</a>
+							<p>durasi : 3 bulan</p>
+							<div id="container-desc">
+								App that used for dumbways student, it was deployed and can
+								downloaded on playstore. Happy download
+							</div>
+							<div>
+								<i class="fa-brands fa-node"></i>
+								<i class="fa-brands fa-square-js"></i>
+								<i class="fa-brands fa-react"></i>
+								<i class="fa-brands fa-node-js"></i>
+							</div>
+							<div class="ctn-btn">
+								<div class="btn-left">
+									<button>edit</button>
+								</div>
+								<div class="btn-right">
+									<button>delete</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="container-card">
+						<div class="card-content">
+							<img src="../image/project.jpeg" alt="gambar" />
+							<a href="blog-detail.html" target="_blank">
+								<h1>Dumbways Mobile App - 2021</h1>
+							</a>
+							<p>durasi : 3 bulan</p>
+							<div id="container-desc">
+								App that used for dumbways student, it was deployed and can
+								downloaded on playstore. Happy download
+							</div>
+							<div>
+								<i class="fa-brands fa-node"></i>
+								<i class="fa-brands fa-square-js"></i>
+								<i class="fa-brands fa-react"></i>
+								<i class="fa-brands fa-node-js"></i>
+							</div>
+							<div class="ctn-btn">
+								<div class="btn-left">
+									<button>edit</button>
+								</div>
+								<div class="btn-right">
+									<button>delete</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="container-card">
+						<div class="card-content">
+							<img src="../image/project.jpeg" alt="gambar" />
+							<a href="blog-detail.html" target="_blank">
+								<h1>Dumbways Mobile App - 2021</h1>
+							</a>
+							<p>durasi : 3 bulan</p>
+							<div id="container-desc">
+								App that used for dumbways student, it was deployed and can
+								downloaded on playstore. Happy download
+							</div>
+							<div>
+								<i class="fa-brands fa-node"></i>
+								<i class="fa-brands fa-square-js"></i>
+								<i class="fa-brands fa-react"></i>
+								<i class="fa-brands fa-node-js"></i>
+							</div>
+							<div class="ctn-btn">
+								<div class="btn-left">
+									<button>edit</button>
+								</div>
+								<div class="btn-right">
+									<button>delete</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="../js/blog.js"></script>
+		<script src="../js/index.js"></script>
+	</body>
+</html>

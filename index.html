@@ -1,0 +1,101 @@
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Personal Web</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<!-- Navigasi -->
+		<nav>
+			<div class="nav-left">
+				<ul>
+					<li>
+						<a href="index.html">
+							<img src="image/Logo.png" alt="logo" />
+						</a>
+					</li>
+					<li class="item-collapse">
+						<a href="index.html" class="active">Home</a>
+					</li>
+					<li class="item-collapse">
+						<a href="html/blog.html">My Project</a>
+					</li>
+					<li class="item-collapse">
+						<a href="html/testimonial.html">Testimonial</a>
+					</li>
+				</ul>
+			</div>
+			<div class="nav-right item-collapse">
+				<a href="html/contact.html">Contact Me</a>
+			</div>
+
+			<div class="nav-right" id="barsmenu">
+				<button
+					style="background-color: transparent; border: none; cursor: pointer"
+					onclick="openHamburger();">
+					<i class="fa-2x fa-solid fa-bars" style="color: white"></i>
+				</button>
+			</div>
+		</nav>
+
+		<div class="hamburger-nav-container" id="hamburger-nav-container">
+			<a href="index.html" class="hamburger-active">Home</a>
+			<a href="html/blog.html">Blog</a>
+			<a href="html/testimonial.html">Testimonial</a>
+			<div class="contact-hum">
+				<a href="html/contact.html">Contact Me</a>
+			</div>
+		</div>
+
+		<!-- Card -->
+		<div class="container-card">
+			<section>
+				<div class="left">
+					<h1>Hi Welcome to my hut</h1>
+					<p>
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni
+						corporis quis voluptate assumenda qui modi nisi iste quasi obcaecati
+						tempora corrupti, libero adipisci velit maxime debitis voluptatum,
+						cumque repellat saepe.
+					</p>
+					<a href="html/contact.html">
+						<button>Contact</button>
+					</a>
+					<div class="card-download">
+						<a href="#">download CV<i class="fa-solid fa-download"></i></a>
+					</div>
+					<div class="sosmed">
+						<a
+							href="https://www.linkedin.com/in/muhammadrezafadilah/"
+							class="fa-brands fa-linkedin"></a>
+						<a
+							href="https://www.instagram.com/rezz.a002/"
+							class="fa-brands fa-instagram"></a>
+						<a
+							href="https://www.facebook.com/rezafadilah123/"
+							class="fa-brands fa-facebook"></a>
+						<a
+							href="https://twitter.com/Murf_111"
+							class="fa-brands fa-twitter"></a>
+					</div>
+				</div>
+				<div class="right">
+					<div class="card">
+						<img src="image/image card.jfif" alt="Ini Gambar"">
+						<h3>Muhammad Reza Fadilah</h3>
+						<p class="card-p">Fullstack Development</p>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<script src="js/index.js"></script>
+	</body>
+</html>

@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+	text-decoration: none;
+	font-family: "Poppins", sans-serif;
+	color: black;
+}
+
+/* Navbar */
+a {
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
+}
+
+body {
+	margin: 0;
+}
+
+nav {
+	background-color: #00214d;
+	display: flex;
+	align-items: center;
+	height: 10vh;
+}
+
+nav ul {
+	display: flex;
+	list-style-type: none;
+	align-items: center;
+}
+
+nav ul li,
+img {
+	margin-right: 25px;
+	font-size: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+nav ul img {
+	width: 70px;
+	height: 10vh;
+}
+
+nav ul li .active {
+	color: #078080;
+	text-decoration: underline;
+}
+
+.nav-left {
+	flex: 50%;
+}
+
+.nav-right {
+	flex: 50%;
+	text-align: end;
+	margin-right: 25px;
+}
+
+.nav-right a {
+	background-color: #078080;
+	padding: 8px 20px;
+	color: white;
+	border-radius: 5px;
+}
+
+#barsmenu {
+	display: none;
+}
+
+.hamburger {
+	display: none;
+}
+
+.hamburger a {
+	color: #000;
+}
+
+.hamburger-nav-container {
+	font-size: 23px;
+	list-style-type: none;
+	display: none;
+	background-color: #9a9a9a;
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
+
+.hamburger-nav-container a {
+	text-decoration: none;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	border: none;
+}
+
+.hamburger-nav-container .hamburger-active {
+	text-decoration: none;
+	color: #078080;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+}
+
+.hamburger-nav-container .contact-hum {
+	background-color: #078080;
+	margin: 0px auto;
+	width: 200px;
+	text-align: center;
+	padding: 0px 50px;
+	color: white;
+	border-radius: 10px;
+}
+
+.hamburger-nav-container .contact-hum:hover {
+	background-color: #000;
+}
+
+/* Card */
+.container-card {
+	width: 70%;
+	margin: 90px auto;
+	display: flex;
+	background-color: #dbdbdb;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0 0 10px black;
+}
+
+.container-card p {
+	text-align: justify;
+}
+
+.container-card button {
+	width: 80px;
+	height: 25px;
+	border-radius: 10px;
+	color: white;
+	background-color: black;
+	text-align: center;
+	margin-bottom: 10px;
+	cursor: pointer;
+	border: none;
+}
+
+.container-card button:hover {
+	background-color: #078080;
+	box-shadow: 0 0 5px grey;
+}
+
+.container-card .left a {
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
+}
+
+.container-card .left a:hover {
+	color: #078080;
+}
+
+.container-card .sosmed {
+	text-align: center;
+	font-size: 30px;
+}
+
+.container-card .card {
+	width: 300px;
+	border: 1px solid black;
+	margin: 20px auto;
+	padding: 0px;
+	border-radius: 20px;
+	box-shadow: 0 0 20px #000000;
+	text-align: center;
+}
+
+.container-card .card-p {
+	text-align: center;
+}
+
+.container-card .card img {
+	border-radius: 20px 20px 0 0;
+	width: 100%;
+	display: block;
+}
+
+.container-card section {
+	display: flex;
+	width: 80%;
+	align-items: center;
+	margin: auto;
+}
+
+.container-card .left {
+	flex: 70%;
+}
+
+.container-card .right {
+	flex: 30%;
+	margin-left: 50px;
+}
+
+@media only screen and (max-width: 900px) {
+	.container-card {
+		width: 90%;
+	}
+
+	.container-card section {
+		flex-direction: column;
+	}
+
+	.container-card button {
+		width: 100%;
+	}
+
+	.container-card .card-download {
+		text-align: center;
+	}
+	.container-card .left {
+		flex: 100%;
+	}
+
+	.container-card .right {
+		margin-left: 0;
+	}
+
+	.item-collapse {
+		display: none;
+	}
+
+	#barsmenu {
+		display: block;
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	.container-card {
+		width: 90%;
+	}
+
+	.container-card section {
+		flex-direction: column;
+	}
+
+	.container-card .right {
+		margin-left: 0;
+	}
+
+	.item-collapse {
+		display: none;
+	}
+
+	#barsmenu {
+		display: block;
+	}
+}
